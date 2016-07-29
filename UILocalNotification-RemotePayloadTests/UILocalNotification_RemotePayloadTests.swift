@@ -30,4 +30,12 @@ class UILocalNotification_RemotePayloadTests: XCTestCase {
         XCTAssertEqual(localNotification.applicationIconBadgeNumber, 0)
         XCTAssertEqual(localNotification.soundName, UILocalNotificationDefaultSoundName)
     }
+
+    func testZeroBadge() {
+        let remotePayload = ["aps": [
+            "badge": 0
+            ]];
+        let localNotification = UILocalNotification(remotePayload: remotePayload)
+        XCTAssertLessThan(localNotification.applicationIconBadgeNumber, 0)
+    }
 }

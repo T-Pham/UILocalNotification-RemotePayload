@@ -12,13 +12,18 @@ public extension UILocalNotification {
 
     convenience init(remotePayload: [String: AnyObject]) {
         self.init()
+        self.applicationIconBadgeNumber = 0
         self.soundName = UILocalNotificationDefaultSoundName
         if let aps = remotePayload["aps"] as? [String: AnyObject] {
             if let alert = aps["alert"] as? String {
                 self.alertBody = alert
             }
             if let badge = aps["badge"] as? Int {
-                self.applicationIconBadgeNumber = badge
+                if badge == 0 {
+                    self.applicationIconBadgeNumber = -1
+                } else {
+                    self.applicationIconBadgeNumber = badge
+                }
             }
             if let sound = aps["sound"] as? String {
                 self.soundName = sound
