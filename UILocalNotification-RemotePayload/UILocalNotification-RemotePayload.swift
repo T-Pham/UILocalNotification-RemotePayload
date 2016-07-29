@@ -10,9 +10,9 @@ import UIKit
 
 public extension UILocalNotification {
 
-    convenience init(remotePayload: [NSString: AnyObject]?) {
+    convenience init(remotePayload: [String: AnyObject]) {
         self.init()
-        if let aps = remotePayload?["aps"] as? [NSString: AnyObject] {
+        if let aps = remotePayload["aps"] as? [String: AnyObject] {
             if let alert = aps["alert"] as? String {
                 self.alertBody = alert
             }
