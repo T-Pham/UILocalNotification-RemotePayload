@@ -12,6 +12,9 @@ import XCTest
 class UILocalNotification_RemotePayloadTests: XCTestCase {
 
     func test() {
-        XCTAssert(UILocalNotification(remotePayload: [:]) is UILocalNotification)
+        let localNotification = UILocalNotification(remotePayload: ["aps": [
+            "alert": "notification alert"
+            ]])
+        XCTAssert(localNotification.alertBody == "notification alert")
     }
 }
