@@ -13,19 +13,19 @@ class UILocalNotification_RemotePayloadTests: XCTestCase {
 
     func testSimpleRemotePayload() {
         let remotePayload = ["aps": [
-            "alert": "some message",
+            "alert": "some alert",
             "badge": 2,
             "sound": "some_audio.caf",
             "category": "some category"
             ]];
         let localNotification = UILocalNotification(remotePayload: remotePayload)
-        XCTAssertEqual(localNotification.alertBody, "some message")
+        XCTAssertEqual(localNotification.alertBody, "some alert")
         XCTAssertEqual(localNotification.applicationIconBadgeNumber, 2)
         XCTAssertEqual(localNotification.soundName, "some_audio.caf")
         XCTAssertEqual(localNotification.category, "some category")
     }
 
-    func testEmptyPayload() {
+    func testEmptyRemotePayload() {
         let remotePayload: [String: AnyObject] = [:]
         let localNotification = UILocalNotification(remotePayload: remotePayload)
         XCTAssertNil(localNotification.alertBody)
@@ -48,5 +48,17 @@ class UILocalNotification_RemotePayloadTests: XCTestCase {
             ]];
         let localNotification = UILocalNotification(remotePayload: remotePayload)
         XCTAssertEqual(localNotification.soundName, UILocalNotificationDefaultSoundName)
+    }
+
+    func testSimpleDictionaryAlert() {
+        let remotePayload = ["aps": [
+            "alert": [
+                "title": "some title",
+                "body": "some body"
+            ]
+            ]];
+        let localNotification = UILocalNotification(remotePayload: remotePayload)
+        XCTAssertEqual(localNotification.alertTitle, "some title")
+        XCTAssertEqual(localNotification.alertBody, "some body")
     }
 }

@@ -15,8 +15,17 @@ public extension UILocalNotification {
         self.applicationIconBadgeNumber = 0
         self.soundName = UILocalNotificationDefaultSoundName
         if let aps = remotePayload["aps"] as? [String: AnyObject] {
-            if let alert = aps["alert"] as? String {
-                self.alertBody = alert
+            if let alert = aps["alert"] {
+                if let alertString = alert as? String {
+                    self.alertBody = alertString
+                } else if let alertDictionary = alert as? [String: AnyObject] {
+                    if let title = alertDictionary["title"] as? String {
+                        self.alertTitle = title
+                    }
+                    if let body = alertDictionary["body"] as? String {
+                        self.alertBody = body
+                    }
+                }
             }
             if let badge = aps["badge"] as? Int {
                 if badge == 0 {
