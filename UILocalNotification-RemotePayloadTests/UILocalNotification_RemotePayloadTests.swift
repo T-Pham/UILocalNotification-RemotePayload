@@ -11,10 +11,15 @@ import XCTest
 
 class UILocalNotification_RemotePayloadTests: XCTestCase {
 
-    func test() {
-        let localNotification = UILocalNotification(remotePayload: ["aps": [
-            "alert": "notification alert"
-            ]])
-        XCTAssert(localNotification.alertBody == "notification alert")
+    func testSimpleRemotePayload() {
+        let remotePayload = ["aps": [
+            "alert": "some message",
+            "badge": 2,
+            "sound": "some_audio.caf",
+            ]];
+        let localNotification = UILocalNotification(remotePayload: remotePayload)
+        XCTAssert(localNotification.alertBody == "some message")
+        XCTAssert(localNotification.applicationIconBadgeNumber == 2)
+        XCTAssert(localNotification.soundName == "some_audio.caf")
     }
 }
