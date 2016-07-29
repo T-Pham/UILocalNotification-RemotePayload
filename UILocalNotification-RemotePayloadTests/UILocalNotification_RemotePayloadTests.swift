@@ -38,4 +38,12 @@ class UILocalNotification_RemotePayloadTests: XCTestCase {
         let localNotification = UILocalNotification(remotePayload: remotePayload)
         XCTAssertLessThan(localNotification.applicationIconBadgeNumber, 0)
     }
+
+    func testDefaultSound() {
+        let remotePayload = ["aps": [
+            "sound": "default"
+            ]];
+        let localNotification = UILocalNotification(remotePayload: remotePayload)
+        XCTAssertEqual(localNotification.soundName, UILocalNotificationDefaultSoundName)
+    }
 }

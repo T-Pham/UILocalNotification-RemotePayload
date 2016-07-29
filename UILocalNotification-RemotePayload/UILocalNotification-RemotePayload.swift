@@ -25,7 +25,7 @@ public extension UILocalNotification {
                     self.applicationIconBadgeNumber = badge
                 }
             }
-            if let sound = aps["sound"] as? String {
+            if let sound = aps["sound"] as? String where sound != "default" {
                 self.soundName = sound
             }
         }
