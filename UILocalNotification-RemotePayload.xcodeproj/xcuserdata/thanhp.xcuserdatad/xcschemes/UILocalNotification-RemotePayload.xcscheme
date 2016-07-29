@@ -5,6 +5,22 @@
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "1BC9CD261D4B3BAF0034E670"
+               BuildableName = "UILocalNotification_RemotePayload.framework"
+               BlueprintName = "UILocalNotification_RemotePayload"
+               ReferencedContainer = "container:UILocalNotification-RemotePayload.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
    </BuildAction>
    <TestAction
       buildConfiguration = "Debug"
@@ -12,7 +28,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "1BC9CD301D4B3BAF0034E670"
+               BuildableName = "UILocalNotification-RemotePayloadTests.xctest"
+               BlueprintName = "UILocalNotification-RemotePayloadTests"
+               ReferencedContainer = "container:UILocalNotification-RemotePayload.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "1BC9CD261D4B3BAF0034E670"
+            BuildableName = "UILocalNotification_RemotePayload.framework"
+            BlueprintName = "UILocalNotification_RemotePayload"
+            ReferencedContainer = "container:UILocalNotification-RemotePayload.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -26,6 +61,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "1BC9CD261D4B3BAF0034E670"
+            BuildableName = "UILocalNotification_RemotePayload.framework"
+            BlueprintName = "UILocalNotification_RemotePayload"
+            ReferencedContainer = "container:UILocalNotification-RemotePayload.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -35,6 +79,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "1BC9CD261D4B3BAF0034E670"
+            BuildableName = "UILocalNotification_RemotePayload.framework"
+            BlueprintName = "UILocalNotification_RemotePayload"
+            ReferencedContainer = "container:UILocalNotification-RemotePayload.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

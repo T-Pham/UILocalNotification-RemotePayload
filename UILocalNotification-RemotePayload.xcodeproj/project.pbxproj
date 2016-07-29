@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1BC9CD2B1D4B3BAF0034E670 /* UILocalNotification-RemotePayload.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BC9CD2A1D4B3BAF0034E670 /* UILocalNotification-RemotePayload.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1BC9CD321D4B3BAF0034E670 /* UILocalNotification-RemotePayload.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BC9CD271D4B3BAF0034E670 /* UILocalNotification-RemotePayload.framework */; };
+		1BC9CD321D4B3BAF0034E670 /* UILocalNotification_RemotePayload.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BC9CD271D4B3BAF0034E670 /* UILocalNotification_RemotePayload.framework */; };
 		1BC9CD371D4B3BAF0034E670 /* UILocalNotification_RemotePayloadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC9CD361D4B3BAF0034E670 /* UILocalNotification_RemotePayloadTests.swift */; };
+		1BC9CD441D4B3D700034E670 /* UILocalNotification-RemotePayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC9CD431D4B3D700034E670 /* UILocalNotification-RemotePayload.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,12 +24,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1BC9CD271D4B3BAF0034E670 /* UILocalNotification-RemotePayload.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "UILocalNotification-RemotePayload.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BC9CD271D4B3BAF0034E670 /* UILocalNotification_RemotePayload.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UILocalNotification_RemotePayload.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BC9CD2A1D4B3BAF0034E670 /* UILocalNotification-RemotePayload.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILocalNotification-RemotePayload.h"; sourceTree = "<group>"; };
 		1BC9CD2C1D4B3BAF0034E670 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1BC9CD311D4B3BAF0034E670 /* UILocalNotification-RemotePayloadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UILocalNotification-RemotePayloadTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BC9CD361D4B3BAF0034E670 /* UILocalNotification_RemotePayloadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILocalNotification_RemotePayloadTests.swift; sourceTree = "<group>"; };
 		1BC9CD381D4B3BAF0034E670 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1BC9CD431D4B3D700034E670 /* UILocalNotification-RemotePayload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILocalNotification-RemotePayload.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,7 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1BC9CD321D4B3BAF0034E670 /* UILocalNotification-RemotePayload.framework in Frameworks */,
+				1BC9CD321D4B3BAF0034E670 /* UILocalNotification_RemotePayload.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,7 +64,7 @@
 		1BC9CD281D4B3BAF0034E670 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1BC9CD271D4B3BAF0034E670 /* UILocalNotification-RemotePayload.framework */,
+				1BC9CD271D4B3BAF0034E670 /* UILocalNotification_RemotePayload.framework */,
 				1BC9CD311D4B3BAF0034E670 /* UILocalNotification-RemotePayloadTests.xctest */,
 			);
 			name = Products;
@@ -71,6 +73,7 @@
 		1BC9CD291D4B3BAF0034E670 /* UILocalNotification-RemotePayload */ = {
 			isa = PBXGroup;
 			children = (
+				1BC9CD431D4B3D700034E670 /* UILocalNotification-RemotePayload.swift */,
 				1BC9CD2A1D4B3BAF0034E670 /* UILocalNotification-RemotePayload.h */,
 				1BC9CD2C1D4B3BAF0034E670 /* Info.plist */,
 			);
@@ -100,9 +103,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		1BC9CD261D4B3BAF0034E670 /* UILocalNotification-RemotePayload */ = {
+		1BC9CD261D4B3BAF0034E670 /* UILocalNotification_RemotePayload */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1BC9CD3B1D4B3BAF0034E670 /* Build configuration list for PBXNativeTarget "UILocalNotification-RemotePayload" */;
+			buildConfigurationList = 1BC9CD3B1D4B3BAF0034E670 /* Build configuration list for PBXNativeTarget "UILocalNotification_RemotePayload" */;
 			buildPhases = (
 				1BC9CD221D4B3BAF0034E670 /* Sources */,
 				1BC9CD231D4B3BAF0034E670 /* Frameworks */,
@@ -113,9 +116,9 @@
 			);
 			dependencies = (
 			);
-			name = "UILocalNotification-RemotePayload";
+			name = UILocalNotification_RemotePayload;
 			productName = "UILocalNotification-RemotePayload";
-			productReference = 1BC9CD271D4B3BAF0034E670 /* UILocalNotification-RemotePayload.framework */;
+			productReference = 1BC9CD271D4B3BAF0034E670 /* UILocalNotification_RemotePayload.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		1BC9CD301D4B3BAF0034E670 /* UILocalNotification-RemotePayloadTests */ = {
@@ -166,7 +169,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1BC9CD261D4B3BAF0034E670 /* UILocalNotification-RemotePayload */,
+				1BC9CD261D4B3BAF0034E670 /* UILocalNotification_RemotePayload */,
 				1BC9CD301D4B3BAF0034E670 /* UILocalNotification-RemotePayloadTests */,
 			);
 		};
@@ -194,6 +197,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BC9CD441D4B3D700034E670 /* UILocalNotification-RemotePayload.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,7 +214,7 @@
 /* Begin PBXTargetDependency section */
 		1BC9CD341D4B3BAF0034E670 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1BC9CD261D4B3BAF0034E670 /* UILocalNotification-RemotePayload */;
+			target = 1BC9CD261D4B3BAF0034E670 /* UILocalNotification_RemotePayload */;
 			targetProxy = 1BC9CD331D4B3BAF0034E670 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -310,6 +314,7 @@
 		1BC9CD3C1D4B3BAF0034E670 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -320,12 +325,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "TPM.UILocalNotification-RemotePayload";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		1BC9CD3D1D4B3BAF0034E670 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -371,13 +378,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1BC9CD3B1D4B3BAF0034E670 /* Build configuration list for PBXNativeTarget "UILocalNotification-RemotePayload" */ = {
+		1BC9CD3B1D4B3BAF0034E670 /* Build configuration list for PBXNativeTarget "UILocalNotification_RemotePayload" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1BC9CD3C1D4B3BAF0034E670 /* Debug */,
 				1BC9CD3D1D4B3BAF0034E670 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1BC9CD3E1D4B3BAF0034E670 /* Build configuration list for PBXNativeTarget "UILocalNotification-RemotePayloadTests" */ = {
 			isa = XCConfigurationList;
@@ -386,6 +394,7 @@
 				1BC9CD401D4B3BAF0034E670 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
