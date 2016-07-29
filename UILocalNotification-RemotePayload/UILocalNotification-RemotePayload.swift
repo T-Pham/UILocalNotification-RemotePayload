@@ -12,6 +12,7 @@ public extension UILocalNotification {
 
     convenience init(remotePayload: [String: AnyObject]) {
         self.init()
+        self.soundName = UILocalNotificationDefaultSoundName
         if let aps = remotePayload["aps"] as? [String: AnyObject] {
             if let alert = aps["alert"] as? String {
                 self.alertBody = alert

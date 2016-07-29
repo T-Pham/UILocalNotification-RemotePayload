@@ -18,16 +18,16 @@ class UILocalNotification_RemotePayloadTests: XCTestCase {
             "sound": "some_audio.caf",
             ]];
         let localNotification = UILocalNotification(remotePayload: remotePayload)
-        XCTAssert(localNotification.alertBody == "some message")
-        XCTAssert(localNotification.applicationIconBadgeNumber == 2)
-        XCTAssert(localNotification.soundName == "some_audio.caf")
+        XCTAssertEqual(localNotification.alertBody, "some message")
+        XCTAssertEqual(localNotification.applicationIconBadgeNumber, 2)
+        XCTAssertEqual(localNotification.soundName, "some_audio.caf")
     }
 
     func testEmptyPayload() {
         let remotePayload: [String: AnyObject] = [:]
         let localNotification = UILocalNotification(remotePayload: remotePayload)
-        XCTAssert(localNotification.alertBody == nil)
-        XCTAssert(localNotification.applicationIconBadgeNumber == 0)
-        XCTAssert(localNotification.soundName == nil)
+        XCTAssertNil(localNotification.alertBody)
+        XCTAssertEqual(localNotification.applicationIconBadgeNumber, 0)
+        XCTAssertEqual(localNotification.soundName, UILocalNotificationDefaultSoundName)
     }
 }
