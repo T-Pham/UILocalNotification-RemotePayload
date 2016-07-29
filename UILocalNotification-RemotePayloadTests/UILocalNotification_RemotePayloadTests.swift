@@ -54,11 +54,45 @@ class UILocalNotification_RemotePayloadTests: XCTestCase {
         let remotePayload = ["aps": [
             "alert": [
                 "title": "some title",
-                "body": "some body"
+                "body": "some body",
+                "launch-image": "some_image.png"
             ]
             ]];
         let localNotification = UILocalNotification(remotePayload: remotePayload)
         XCTAssertEqual(localNotification.alertTitle, "some title")
         XCTAssertEqual(localNotification.alertBody, "some body")
+        XCTAssertEqual(localNotification.alertLaunchImage, "some_image.png")
+    }
+
+    func testSimpleLocalizedDictionaryAlert() {
+        let remotePayload = ["aps": [
+            "alert": [
+                "title": "ignored title",
+                "body": "ignored body",
+                "title-loc-key": "localized title",
+                "action-loc-key": "localized action",
+                "loc-key": "localized body"
+            ]
+            ]];
+        let localNotification = UILocalNotification(remotePayload: remotePayload)
+        XCTAssertEqual(localNotification.alertTitle, "localized title")
+        XCTAssertEqual(localNotification.alertAction, "localized action")
+        XCTAssertEqual(localNotification.alertBody, "localized body")
+    }
+
+    func testComplexLocalizedDictionaryAlert() {
+        let remotePayload = ["aps": [
+            "alert": [
+                "title": "ignored title",
+                "body": "ignored body",
+                "title-loc-key": "localized %@",
+                "title-loc-args": ["title"],
+                "loc-key": "localized %@",
+                "loc-args": ["body"]
+            ]
+            ]];
+        let localNotification = UILocalNotification(remotePayload: remotePayload)
+        XCTAssertEqual(localNotification.alertTitle, "localized title")
+        XCTAssertEqual(localNotification.alertBody, "localized body")
     }
 }
