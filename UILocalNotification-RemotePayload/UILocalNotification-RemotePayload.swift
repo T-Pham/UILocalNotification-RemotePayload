@@ -28,6 +28,9 @@ public extension UILocalNotification {
             if let sound = aps["sound"] as? String where sound != "default" {
                 self.soundName = sound
             }
+            if let category = aps["category"] as? String {
+                self.category = category
+            }
         }
     }
 }
