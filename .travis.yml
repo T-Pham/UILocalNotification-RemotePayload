@@ -1,6 +1,7 @@
 osx_image: xcode7.3
 language: objective-c
 script:
+- open -b com.apple.iphonesimulator
 - xcodebuild -scheme UILocalNotification-RemotePayload -project UILocalNotification-RemotePayload.xcodeproj -sdk iphonesimulator9.3 -destination 'platform=iOS Simulator,name=iPhone 6S,OS=9.3' build test | xcpretty
 after_success:
 - bash <(curl -s https://codecov.io/bash)
