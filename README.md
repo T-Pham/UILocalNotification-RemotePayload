@@ -231,7 +231,7 @@ pod 'UILocalNotification-RemotePayload'
 
 ### Manually
 
-Add the file `/UILocalNotification-RemotePayload/UILocalNotification-RemotePayload.swift` to your project. You are all set.
+Add the file [`/UILocalNotification-RemotePayload/UILocalNotification-RemotePayload.swift`](/UILocalNotification-RemotePayload/UILocalNotification-RemotePayload.swift) to your project. You are all set.
 
 ## License
 
