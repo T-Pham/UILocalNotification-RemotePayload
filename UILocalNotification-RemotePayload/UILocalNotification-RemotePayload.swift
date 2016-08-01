@@ -10,6 +10,11 @@ import UIKit
 
 public extension UILocalNotification {
 
+    /**
+     Creates an instance from a remote notification payload.
+
+     - Parameter remotePayload: the remote notification payload as specified in [Apple's documentation](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/TheNotificationPayload.html).
+     */
     convenience init(remotePayload: [NSObject: AnyObject]) {
         self.init()
         self.applicationIconBadgeNumber = 0
