@@ -10,7 +10,7 @@ import UIKit
 
 public extension UILocalNotification {
 
-    convenience init(remotePayload: [String: AnyObject]) {
+    convenience init(remotePayload: [NSObject: AnyObject]) {
         self.init()
         self.applicationIconBadgeNumber = 0
         self.soundName = UILocalNotificationDefaultSoundName
