@@ -5,4 +5,7 @@ Initial release.
 Add WatchOS support. Update remotePayload's type.
 
 # v1.0.2
-Add Package.swift
+Add Package.swift.
+
+# v1.0.3
+Update the pod description.

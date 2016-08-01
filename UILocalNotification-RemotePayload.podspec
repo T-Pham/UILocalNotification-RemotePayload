@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 s.name             = 'UILocalNotification-RemotePayload'
-s.version          = '1.0.2'
-s.summary          = 'Create UILocalNotification from remote notification payload.'
+s.version          = '1.0.3'
+s.summary          = 'Gmail & Facebook Messenger-like notifications.'
 s.description      = <<-DESC
 UILocalNotification-RemotePayload provides a method to create UILocalNotification from remote notification payload. It is helpful because you have more control over local notifications than remote notifications. Please see the README for the details.
 DESC
