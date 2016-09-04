@@ -9,3 +9,6 @@ Add Package.swift.
 
 # v1.0.3
 Update the pod description.
+
+# v1.0.4
+Update swift package
