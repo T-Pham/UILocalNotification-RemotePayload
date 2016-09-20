@@ -13,5 +13,4 @@ s.ios.deployment_target = '8.2'
 s.watchos.deployment_target = '2.0'
 s.source_files = 'UILocalNotification-RemotePayload/*.swift'
 s.frameworks = 'UIKit'
-s.deprecated = true
 end
