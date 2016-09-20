@@ -233,6 +233,21 @@ pod 'UILocalNotification-RemotePayload'
 
 Add the file [`/UILocalNotification-RemotePayload/UILocalNotification-RemotePayload.swift`](/UILocalNotification-RemotePayload/UILocalNotification-RemotePayload.swift) to your project. You are all set.
 
+## Compatibility
+From version 2.0.0, Swift 3 syntax is used. If your project is still using Swift version 2, please use a UILocalNotification-RemotePayload version prior to 2.0.0.
+
+Podfile
+
+```ruby
+pod 'UILocalNotification-RemotePayload', '~> 1.0.4'
+```
+
+or Cartfile
+
+```ruby
+github "T-Pham/UILocalNotification-RemotePayload" ~> 1.0.4
+```
+
 ## License
 
 UILocalNotification-RemotePayload is available under the MIT license. See the [LICENSE](LICENSE) file for more info.

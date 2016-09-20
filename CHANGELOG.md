@@ -12,3 +12,6 @@ Update the pod description.
 
 # v1.0.4
 Update swift package
+
+# v2.0.0
+Upgrade to Swift 3

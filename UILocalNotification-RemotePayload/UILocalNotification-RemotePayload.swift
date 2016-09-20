@@ -15,7 +15,7 @@ public extension UILocalNotification {
 
      - Parameter remotePayload: the remote notification payload as specified in [Apple's documentation](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/TheNotificationPayload.html).
      */
-    convenience init(remotePayload: [NSObject: AnyObject]) {
+    convenience init(remotePayload: [AnyHashable: Any]) {
         self.init()
         self.applicationIconBadgeNumber = 0
         self.soundName = UILocalNotificationDefaultSoundName
@@ -26,7 +26,7 @@ public extension UILocalNotification {
                 } else if let alertDictionary = alert as? [String: AnyObject] {
                     if let titleLocKey = alertDictionary["title-loc-key"] as? String {
                         if let titleLocArgs = alertDictionary["title-loc-args"] as? [String] {
-                            var convertedTitleLocArgs = [CVarArgType]()
+                            var convertedTitleLocArgs = [CVarArg]()
                             for titleLocArg in titleLocArgs {
                                 convertedTitleLocArgs.append(titleLocArg)
                             }
@@ -39,7 +39,7 @@ public extension UILocalNotification {
                     }
                     if let locKey = alertDictionary["loc-key"] as? String {
                         if let locArgs = alertDictionary["loc-args"] as? [String] {
-                            var convertedLocArgs = [CVarArgType]()
+                            var convertedLocArgs = [CVarArg]()
                             for locArg in locArgs {
                                 convertedLocArgs.append(locArg)
                             }
@@ -65,7 +65,7 @@ public extension UILocalNotification {
                     self.applicationIconBadgeNumber = badge
                 }
             }
-            if let sound = aps["sound"] as? String where sound != "default" {
+            if let sound = aps["sound"] as? String, sound != "default" {
                 self.soundName = sound
             }
             if let category = aps["category"] as? String {

@@ -23,6 +23,9 @@
       location = "group:LICENSE">
    </FileRef>
    <FileRef
+      location = "group:.swift-version">
+   </FileRef>
+   <FileRef
       location = "group:Package.swift">
    </FileRef>
 </Workspace>
