@@ -13,6 +13,12 @@
 '                                                                                                            
 ```
 
+---
+
+# The feature is now officially supported in APNS on iOS 10+ via the `apns_collapse_id` header.
+
+---
+
 # UILocalNotification-RemotePayload
 
 [![CI Status](https://img.shields.io/travis/T-Pham/UILocalNotification-RemotePayload/master.svg?style=flat-square)](https://travis-ci.org/T-Pham/UILocalNotification-RemotePayload)
